@@ -1,0 +1,29 @@
+%secondry_family{
+  font-family: "Raleway", sans-serif;
+  color: hsl(0, 0%, 100%);
+}
+
+%flx-box{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+%btn{
+  background: $btn_background;
+  border-radius: 18px;
+  padding: 10px 50px;
+  color: $font_color;
+}
+%anchor{
+  color: $link_font_color;
+  text-decoration: none;
+  border-bottom: 1px solid $link_font_color;
+  padding-bottom: 2px;
+}
+%pressed-anchor{
+  color: $font_color;
+  text-decoration: none;
+  border-bottom: 1px solid $font_color;
+  padding-bottom: 2px;
+}

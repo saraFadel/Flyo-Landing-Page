@@ -1,0 +1,17 @@
+// Colors
+$intro_signUp_background: hsl(217, 28%, 15%);
+$main_background: hsl(218, 28%, 13%);
+$footer_background: hsl(216, 53%, 9%);
+$testimonials_background: hsl(219, 30%, 18%);
+//(inside call-to-action gradient)
+$btn_background: linear-gradient(to right,hsl(176, 68%, 64%),hsl(198, 60%, 50%));
+$a_color: hsl(176, 68%, 64%);
+
+// Fonts
+//Body
+$primary_font_family: 'Open Sans', sans-serif;
+//Headings, Call-to-actions, Header Navigation
+$secondry_font_family: 'Raleway', sans-serif;
+$font_size: 14px;
+$font_color: hsl(0, 0%, 100%);
+$link_font_color: hsl(176, 68%, 64%);

@@ -1,0 +1,179 @@
+@import 'vars';
+@import 'utilities';
+* {
+   margin: 0;
+   padding: 0;
+   line-height: 1.5em;
+ }
+body{
+  background: $main_background;
+  font-size: $font_size;
+  font-family: $primary_font_family;
+  color: $font_color;
+  text-align: center;
+  justify-content: center;
+  #intro-body-container{
+    padding: 30px 5%;
+    //margin-bottom: -100px;
+    background: $intro_signUp_background;
+    background-image: url('../images/bg-curvy-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    justify-content: center;
+    nav{
+       @extend %flx-box;
+       align-items: center;
+       text-align: left;
+       .navItem{
+         text-decoration: none;
+         color: $font_color;
+         padding: 10px 10px 0 10px;
+         margin: 30px 20px 0px 20px;
+         &:hover{
+           @extend %pressed-anchor;
+         }
+       }
+     }
+    #introImage{
+      padding: 30px 0 50px 0;
+      width: 50%;
+    }
+    div{
+      padding: 10px 0;
+    }
+    button{
+      @extend %btn;
+    }
+  }
+  #features-container{
+    @extend %flx-box;
+    .box{
+      max-width: 30%;
+      margin: 20px 10%;
+      h3{
+        margin: 10px 0;
+      }
+    }
+  }
+  #productive-container{
+    margin: 100px 10%;
+    @extend %flx-box;
+    .productive-box{
+      width: 40%;
+      text-align: left;
+      a{
+        @extend %anchor;
+        &:hover{
+          @extend %pressed-anchor;
+          #arrow{
+            filter: grayscale(1.5);
+            filter: brightness(1.5);
+
+          }
+        }
+      }
+    }
+  }
+  #quotes-container{
+    width: 85%;
+    margin: 30px auto 150px auto;
+    @extend %flx-box;
+    align-items: flex-start;
+    img{
+      position: absolute;
+      z-index: -1;
+    }
+    .quote{
+      margin: 35px 0 10px 10px;
+      padding: 30px 30px;
+      background: $testimonials_background;
+      width: 26%;
+      text-align: left;
+      border-radius: 5px;
+      img{
+        position: static;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+      }
+      .profile-data{
+        margin-left: 10px;
+        margin-top: 30px;
+        display: inline-block;
+      }
+    }
+  }
+  #signUp{
+    margin: 50px 21% -120px 21%;
+    padding: 50px 50px;
+    background: $intro_signUp_background;
+    border-radius: 5px;
+    }
+    p{
+      padding: 20px 15px;
+    }
+    input{
+      border-radius: 20px;
+      padding: 13px 200px 13px 30px;
+      margin-right: 15px;
+      border: none;
+    }
+    #button {
+      @extend %btn;
+    }
+    #validation{
+      color: #F44336;
+      margin-top: -15px;
+      padding-left: 50px;
+      text-align: left;
+      display: none;
+      font-size: 0.75em;
+    }
+  footer{
+    background: $footer_background;
+    text-align: left;
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    #info{
+      margin: 200px 7% 0 7%;
+        #info-container{
+          @extend %flx-box;
+
+          .info-box{
+            max-width: 29%;
+            align-self: flex-start;
+            margin: 10px 0;
+            img{
+              padding-right: 20px;
+            }
+            #location{
+              position: absolute;
+              padding: 13px 30px 0 0;
+            }
+            #location-info{
+              margin-left: 10px;
+              text-align:left;
+              padding-left: 30px;
+            }
+            p{
+              padding: 7px 10px;
+            }
+            i{
+              padding: 10px 10px;
+              margin: 0 5px;
+              border: 1px solid $font_color;
+              border-radius: 50%;
+            }
+          }
+      }
+      #credintials{
+        text-align: center;
+        margin: 20px 0;
+        a{
+          @extend %anchor;
+        }
+      }
+    }
+  }
+}
