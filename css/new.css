@@ -33,7 +33,6 @@ body #productive-container #productive-text a:hover, body #intro-body-container 
 }
 
 body {
-  width: 100%;
   background: #181f2a;
   font-size: 14px;
   font-family: "Open Sans", sans-serif;
@@ -42,9 +41,10 @@ body {
   justify-content: center;
 }
 body #intro-body-container {
-  width: 100%;
-  padding: 30px 1.5%;
-  margin: auto auto;
+  display: inline-block;
+  width: 98%;
+  padding: 30px 1%;
+  margin: 0;
   background: #1c2431;
   background-image: url("../images/bg-curvy-desktop.svg");
   background-repeat: no-repeat;
@@ -53,6 +53,7 @@ body #intro-body-container {
 body #intro-body-container nav {
   align-items: center;
   text-align: left;
+  padding: 0px 10px;
 }
 body #intro-body-container nav .navItem {
   text-decoration: none;
@@ -62,12 +63,12 @@ body #intro-body-container nav .navItem {
 }
 @media (max-width: 600px) {
   body #intro-body-container nav #logo {
-    width: 130px;
-    height: 35px;
+    width: 100px;
+    height: 25px;
   }
   body #intro-body-container nav .navItem {
-    padding: 10px 10px 0 10px;
-    margin: auto 10px;
+    padding: 10px 0 0 0;
+    margin: auto 4px;
   }
 }
 body #intro-body-container #introImage {
@@ -171,13 +172,26 @@ body #signUp #validation {
   display: none;
   font-size: 0.75em;
 }
-@media (max-width: 1300px) {
+@media (max-width: 600px) {
   body #signUp {
-    margin: 50px 15% -120px 15%;
+    margin: 50px 5% -170px 5%;
+    padding: 50px 1%;
   }
   body #signUp input {
     border-radius: 20px;
-    padding: 10px 150px 10px 30px;
+    padding: 10px 40px 10px 30px;
+    margin: 10px 8px;
+  }
+}
+@media (min-width: 600px) and (max-width: 1300px) {
+  body #signUp {
+    margin: 50px 15% -160px 15%;
+    padding: 50px 1%;
+  }
+  body #signUp input {
+    border-radius: 20px;
+    padding: 10px 100px 10px 30px;
+    margin: 10px 8px;
   }
 }
 body footer {
@@ -188,7 +202,7 @@ body footer {
   width: 100%;
 }
 body footer #info {
-  margin: 200px 7% 0 7%;
+  margin: 220px 7% 0 7%;
 }
 body footer #info #info-container .info-box {
   max-width: 29%;
@@ -211,10 +225,18 @@ body footer #info #info-container .info-box p {
   padding: 7px 10px;
 }
 body footer #info #info-container .info-box i {
-  padding: 10px 10px;
+  padding: 8px 9px;
   margin: 0 5px;
   border: 1px solid white;
   border-radius: 50%;
+}
+body footer #info #info-container #social {
+  text-align: center;
+}
+@media (max-width: 805px) {
+  body footer #info #info-container .info-box {
+    min-width: 100%;
+  }
 }
 body footer #info #credintials {
   text-align: center;
