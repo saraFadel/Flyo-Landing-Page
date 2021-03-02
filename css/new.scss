@@ -6,6 +6,7 @@
    line-height: 1.5em;
  }
 body{
+  width: 100%;
   background: $main_background;
   font-size: $font_size;
   font-family: $primary_font_family;
@@ -13,13 +14,13 @@ body{
   text-align: center;
   justify-content: center;
   #intro-body-container{
-    padding: 30px 5%;
-    //margin-bottom: -100px;
+    width: 100%;
+    padding: 30px 1.5%;
+    margin: auto auto;
     background: $intro_signUp_background;
     background-image: url('../images/bg-curvy-desktop.svg');
     background-repeat: no-repeat;
     background-position: bottom;
-    justify-content: center;
     nav{
        @extend %flx-box;
        align-items: center;
@@ -28,12 +29,23 @@ body{
          text-decoration: none;
          color: $font_color;
          padding: 10px 10px 0 10px;
-         margin: 30px 20px 0px 20px;
+         margin: auto 20px;
          &:hover{
            @extend %pressed-anchor;
          }
        }
+       @media(max-width: 600px){
+         #logo{
+           width: 130px;
+           height: 35px;
+         }
+         .navItem{
+           padding: 10px 10px 0 10px;
+           margin: auto 10px;
+         }
+       }
      }
+
     #introImage{
       padding: 30px 0 50px 0;
       width: 50%;
@@ -45,21 +57,36 @@ body{
       @extend %btn;
     }
   }
+
   #features-container{
     @extend %flx-box;
     .box{
-      max-width: 30%;
+      width: 30%;
       margin: 20px 10%;
       h3{
         margin: 10px 0;
       }
     }
+    @media(max-width: 450px){
+      .box{
+        width: 80%;
+      }
+    }
   }
+
   #productive-container{
     margin: 100px 10%;
     @extend %flx-box;
     .productive-box{
       width: 40%;
+    }
+    #productive-image{
+      /*float: right;*/
+      width:100%;
+    }
+    #productive-text{
+      width:48%;
+      /*float: left;*/
       text-align: left;
       a{
         @extend %anchor;
@@ -68,12 +95,18 @@ body{
           #arrow{
             filter: grayscale(1.5);
             filter: brightness(1.5);
-
           }
         }
       }
     }
+    @media(max-width: 750px){
+      .productive-box{
+        min-width: 95%;
+        margin: auto auto 50px auto;
+      }
+    }
   }
+
   #quotes-container{
     width: 85%;
     margin: 30px auto 150px auto;
@@ -102,13 +135,18 @@ body{
         display: inline-block;
       }
     }
+    @media (max-width: 920px){
+      .quote{
+        width: 80%;
+        margin: 35px 0 10px 10px;
+      }
+    }
   }
   #signUp{
     margin: 50px 21% -120px 21%;
     padding: 50px 50px;
     background: $intro_signUp_background;
     border-radius: 5px;
-    }
     p{
       padding: 20px 15px;
     }
@@ -129,6 +167,15 @@ body{
       display: none;
       font-size: 0.75em;
     }
+    @media(max-width: 1300px){
+      margin: 50px 15% -120px 15%;
+      input{
+        border-radius: 20px;
+        padding: 10px 150px 10px 30px;
+      }
+    }
+  }
+
   footer{
     background: $footer_background;
     text-align: left;
